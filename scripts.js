@@ -9,9 +9,12 @@ let box = document.getElementsByClassName('box');
 
 area.addEventListener('click', e => {
 	if(e.target.className = 'box') {
+		if(e.target.value == undefined) {
 		move % 2 === 0 ? e.target.innerHTML = 'X' : e.target.innerHTML = '0';
+		e.target.value = 1; 
 		move ++; 
 		check(); 
+		}
 	}
 
 })
